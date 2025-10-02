@@ -416,3 +416,9 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Project-specific ignores
+GEMINI.md
+/.jest-cache
+jest.config.js
+*.json
