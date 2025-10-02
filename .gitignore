@@ -422,3 +422,4 @@ GEMINI.md
 /.jest-cache
 jest.config.js
 *.json
+coverage/
