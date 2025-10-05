@@ -23,4 +23,20 @@ export function divide(a, b) {
   return operationResult;
 }
 
-export function operate() {}
+export function operate(o, a, b) {
+  // let operandL = a;
+  // let operandR = b;
+  // let operator = o;
+  if (o === `+`) {
+    return add(a, b);
+  } else if (o === `-`) {
+    return subtract(a, b);
+  } else if (o === `/`) {
+    return divide(a, b);
+  } else if (o === `*`) {
+    return multiply(a, b);
+  } else {
+    return "Error: Invalid operator";
+  }
+}
+operate("/", 6, 3);

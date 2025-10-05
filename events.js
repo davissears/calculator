@@ -2,4 +2,7 @@
 
 import { add, subtract, multiply, divide, operate } from "./script.js";
 
-console.log(add(1, 1));
+//* display variables
+// let operandL;
+// let operandR;
+// let operator;
