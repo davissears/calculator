@@ -21,13 +21,25 @@ body {
   width: 400px;
   height: 150px;
   box-sizing: border-box;
-  display: block;
+  display: flex;
   background-color: white;
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
   align-items: center;
 }
+.display {
+  width: stretch;
+  height: stretch;
+  display: inline;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 150px;
+  font-weight: bolder;
+  font-size: 75px;
+  font-family: monospace;
+}
+
 #buttonContainer {
   background-color: white;
   width: 400px;
@@ -41,6 +53,17 @@ body {
   justify-content: center;
 }
 .button {
+  font-family: monospace;
+  font-size: 75px;
+  border: 1px black solid;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.intButton {
+  font-family: monospace;
+  font-size: 75px;
   border: 1px black solid;
   width: 100px;
   height: 100px;
@@ -48,6 +71,8 @@ body {
   border-radius: 5px;
 }
 .clearButton {
+  font-size: 50px;
+  font-family: monospace;
   border-radius: 10px;
   border: 1px black solid;
   height: 100px;
