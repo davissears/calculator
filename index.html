@@ -10,34 +10,56 @@
   </head>
   <body>
     <div id="calcContainer">
-      <form>
+      <form id="calculator-Form">
         <div id="display-Container">
-          <div class="display"><output>1</output></div>
-          <div class="display"><output>+</output></div>
-          <div class="display"><output>1</output></div>
+          <div class="display">
+            <output
+              id="operand-Display-L"
+              name="display-Operand-L"
+              for="int-Button"
+            ></output>
+          </div>
+          <div class="display">
+            <output id="operator-Display" name="display-Operator"></output>
+          </div>
+          <div class="display">
+            <output id="operand-Display-R" name="display-Operand-R"></output>
+          </div>
           <div class="display">=</div>
 
           <div class="display">
-            <output name="operation-result" for="opertionResult">2</output>
+            <output
+              id="operate-Result"
+              name="operate-Result"
+              for="operate-Result"
+            ></output>
           </div>
         </div>
         <div id="buttonContainer">
-          <button class="intButton" value="7">7</button
-          ><button class="intButton" value="8">8</button
-          ><button class="intButton" value="9">9</button
-          ><button class="button" value="+">➕</button>
-          <button class="intButton" value="4">4</button
-          ><button class="intButton" value="5">5</button
-          ><button class="intButton" value="6">6</button
-          ><button class="button" value="x">✖️</button>
-          <button class="intButton" value="1">1</button
-          ><button class="intButton" value="2">2</button
-          ><button class="intButton" value="3">3</button
-          ><button class="button" value="-">➖</button>
+          <button class="button" name="int-Button" value="7">7</button
+          ><button class="button" name="int-Button" value="8">8</button
+          ><button class="button" name="int-Button" value="9">9</button
+          ><button class="operator-Button" name="operator-Button" value="+">
+            ➕
+          </button>
+          <button class="button" name="int-Button" value="4">4</button
+          ><button class="button" name="int-Button" value="5">5</button
+          ><button class="button" name="int-Button" value="6">6</button
+          ><button class="operator-Button" name="operator-Button" value="x">
+            ✖️
+          </button>
+          <button class="button" name="int-Button" value="1">1</button
+          ><button class="button" name="int-Button" value="2">2</button
+          ><button class="button" name="int-Button" value="3">3</button
+          ><button class="operator-Button" name="operator-Button" value="-">
+            ➖
+          </button>
           <button class="clearButton">␡</button
-          ><button class="intButton" value="0">0</button
+          ><button class="button" name="int-Button" value="0">0</button
           ><button class="button" value=".">.</button
-          ><button class="button" value="/">➗</button>
+          ><button class="operator-Button" name="operator-Button" value="/">
+            ➗
+          </button>
         </div>
       </form>
     </div>

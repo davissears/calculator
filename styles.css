@@ -54,6 +54,7 @@ body {
 }
 .button {
   font-family: monospace;
+
   font-size: 75px;
   border: 1px black solid;
   width: 100px;
@@ -61,6 +62,16 @@ body {
   box-sizing: border-box;
   border-radius: 5px;
 }
+.operator-Button {
+  font-family: monospace;
+  font-size: 75px;
+  border: 1px black solid;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
 .intButton {
   font-family: monospace;
   font-size: 75px;
