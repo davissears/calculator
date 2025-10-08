@@ -37,6 +37,7 @@ calculatorForm.addEventListener("click", (e) => {
     if (operandDisplayL.textContent !== "") {
       currentState = "rightOperand";
       operatorDisplay.textContent = displayContent;
+      // getOperation();
     }
     //* clear button state management
   } else if (button.className === "clearButton") {
@@ -44,6 +45,27 @@ calculatorForm.addEventListener("click", (e) => {
     operatorDisplay.textContent = "";
     operandDisplayR.textContent = "";
     resultDisplay.textContent = "";
+    getOperation();
     currentState = "leftOperand";
   }
+});
+//* Call & display Operate
+function getOperation() {
+  let a = operandDisplayL.textContent;
+  console.log(a);
+  let o = operatorDisplay.textContent;
+  console.log(o);
+  let b = operandDisplayR.value;
+  console.log(b);
+  return { a: a, o: o, b: b };
+}
+
+const equals = document.getElementById("equals-Button");
+equals.addEventListener("click", (e) => {
+  const opVar = getOperation();
+
+  operate(opVar, opVar.a, opVar.o, opVar.b);
+  console.log(operationResult);
+
+  resultDisplay.textContent = operate(opVar, opVar.a, opVar.o, opVar.b);
 });
