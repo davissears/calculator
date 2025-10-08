@@ -8,38 +8,37 @@ const operandDisplayL = document.getElementById("operand-Display-L");
 const operatorDisplay = document.getElementById("operator-Display");
 const operandDisplayR = document.getElementById("operand-Display-R");
 const resultDisplay = document.getElementById("operate-Result");
-
-//*State Management
+//*State Management variables
 // keeps track of display state
-
 let currentState = "leftOperand";
 
 //*callback functions
 //updates display
-function updateDisplay(displayContent) {
-  getDisplayState(currentState);
-  currentState = displayContent;
-  console.log(currentState);
-}
+// function updateDisplay(displayContent) {
+//   getDisplayState(currentState);
+//   currentState = displayContent;
+//   console.log(currentState);
+// }
 
 //* button Events
-
 calculatorForm.addEventListener("click", (e) => {
   e.preventDefault();
   const button = e.target;
   const displayContent = button.value;
-
+  //* display state management
   if (button.className === "button") {
     if (currentState === "leftOperand") {
       operandDisplayL.append(displayContent);
     } else if (currentState === "rightOperand") {
       operandDisplayR.append(displayContent);
     }
+    //* operator button event handling
   } else if (button.className === "operator-Button") {
     if (operandDisplayL.textContent !== "") {
       currentState = "rightOperand";
       operatorDisplay.textContent = displayContent;
     }
+    //* clear button state management
   } else if (button.className === "clearButton") {
     operandDisplayL.textContent = "";
     operatorDisplay.textContent = "";
