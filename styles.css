@@ -43,7 +43,7 @@ body {
 #buttonContainer {
   background-color: white;
   width: 400px;
-  height: 400px;
+  height: 500px;
   box-sizing: border-box;
   display: flex;
   margin-left: auto;
@@ -88,6 +88,15 @@ body {
   border: 1px black solid;
   height: 100px;
   box-sizing: border-box;
-  box-sizing: border-box;
   width: 100px;
+}
+
+#equals-Button {
+  font-family: monospace;
+  font-size: 75px;
+  border: 1px black solid;
+  width: 400px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }

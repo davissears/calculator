@@ -1,9 +1,9 @@
 //* Module Imports
 
 import { add, subtract, multiply, divide, operate } from "./script.js";
-
-//* display variables
+//reference for entire form
 const calculatorForm = document.getElementById("calculator-Form");
+//* display variables
 const operandDisplayL = document.getElementById("operand-Display-L");
 const operatorDisplay = document.getElementById("operator-Display");
 const operandDisplayR = document.getElementById("operand-Display-R");
@@ -24,30 +24,27 @@ function updateDisplay(displayContent) {
 
 //* button Events
 
-calculatorForm.addEventListener(
-  "click",
-  //event capture
-  (e) => {
-    //attach the event to preventDefault() method
+calculatorForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  const button = e.target;
+  const displayContent = button.value;
 
-    // getDisplayState(currentState);
-
-    const button = e.target;
-    const displayContent = button.value;
-    const operatorButton =
-      calculatorForm.getElementsByClassName("operator-Button");
-
-    if (button.className === `button`) {
-      if (currentState === "leftOperand") {
-        operandDisplayL.append(displayContent);
-      } else if (currentState !== "leftOperand") {
-        operandDisplayR.append(displayContent);
-      }
-    } else if (button.className === "operator-Button") {
-      currentState = "rightOperand";
-      operatorDisplay.append(displayContent);
+  if (button.className === "button") {
+    if (currentState === "leftOperand") {
+      operandDisplayL.append(displayContent);
+    } else if (currentState === "rightOperand") {
+      operandDisplayR.append(displayContent);
     }
-
-    e.preventDefault();
+  } else if (button.className === "operator-Button") {
+    if (operandDisplayL.textContent !== "") {
+      currentState = "rightOperand";
+      operatorDisplay.textContent = displayContent;
+    }
+  } else if (button.className === "clearButton") {
+    operandDisplayL.textContent = "";
+    operatorDisplay.textContent = "";
+    operandDisplayR.textContent = "";
+    resultDisplay.textContent = "";
+    currentState = "leftOperand";
   }
-);
+});
