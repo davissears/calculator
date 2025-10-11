@@ -14,7 +14,6 @@ let currentState = "leftOperand";
 
 //*callback functions
 
-
 //* button Events
 calculatorForm.addEventListener("click", (e) => {
 	e.preventDefault();
@@ -58,7 +57,7 @@ function getOperation() {
 const equals = document.getElementById("equals-Button");
 equals.addEventListener("click", () => {
 	const opVar = getOperation();
-    const a = Number(opVar.a);
-    const b = Number(opVar.b);
+	const a = Number(opVar.a);
+	const b = Number(opVar.b);
 	resultDisplay.textContent = operate(opVar.o, a, b);
 });
