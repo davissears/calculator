@@ -1,4 +1,5 @@
 //* Module Imports
+import { operate } from "./script.js";
 
 //reference for entire form
 const calculatorForm = document.getElementById("calculator-Form");
@@ -12,12 +13,7 @@ const resultDisplay = document.getElementById("operate-Result");
 let currentState = "leftOperand";
 
 //*callback functions
-//updates display
-// function updateDisplay(displayContent) {
-//   getDisplayState(currentState);
-//   currentState = displayContent;
-//   console.log(currentState);
-// }
+
 
 //* button Events
 calculatorForm.addEventListener("click", (e) => {
@@ -54,7 +50,7 @@ function getOperation() {
 	console.log(a);
 	const o = operatorDisplay.textContent;
 	console.log(o);
-	const b = operandDisplayR.value;
+	const b = operandDisplayR.textContent;
 	console.log(b);
 	return { a: a, o: o, b: b };
 }
@@ -62,9 +58,7 @@ function getOperation() {
 const equals = document.getElementById("equals-Button");
 equals.addEventListener("click", () => {
 	const opVar = getOperation();
-
-	operate(opVar, opVar.a, opVar.o, opVar.b);
-	console.log(operationResult);
-
-	resultDisplay.textContent = operate(opVar, opVar.a, opVar.o, opVar.b);
+    const a = Number(opVar.a);
+    const b = Number(opVar.b);
+	resultDisplay.textContent = operate(opVar.o, a, b);
 });
