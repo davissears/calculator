@@ -53,11 +53,12 @@ function getOperation() {
 	console.log(b);
 	return { a: a, o: o, b: b };
 }
-
+const equalSign = document.getElementById("equals-Sign-Display");
 const equals = document.getElementById("equals-Button");
 equals.addEventListener("click", () => {
 	const opVar = getOperation();
 	const a = Number(opVar.a);
 	const b = Number(opVar.b);
+	equalSign.textContent = "=";
 	resultDisplay.textContent = operate(opVar.o, a, b);
 });
