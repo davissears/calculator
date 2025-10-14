@@ -9,7 +9,6 @@ const operatorDisplay = document.getElementById("operator-Display");
 const operandDisplayR = document.getElementById("operand-Display-R");
 const resultDisplay = document.getElementById("operate-Result");
 //*State Management variables
-// keeps track of display state
 let currentState = "leftOperand";
 
 //*callback functions
@@ -31,7 +30,6 @@ calculatorForm.addEventListener("click", (e) => {
 		if (operandDisplayL.textContent !== "") {
 			currentState = "rightOperand";
 			operatorDisplay.textContent = displayContent;
-			// getOperation();
 		}
 		//* clear button state management
 	} else if (button.className === "clearButton") {
