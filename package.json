@@ -1,14 +1,14 @@
 {
-  "name": "calculator",
-  "version": "1.0.0",
-  "description": "A simple calculator project.",
-  "main": "script.js",
-  "scripts": {
-    "test": "bun test",
-    "build": "bun build ./script.js ./events.js --outdir ./dist",
-    "start": "bun run ./index.html"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "calculator",
+	"version": "1.0.0",
+	"description": "A simple calculator project.",
+	"main": "script.js",
+	"scripts": {
+		"test": "bun test",
+		"build": "bun build ./script.js ./events.js --outdir ./dist",
+		"start": "bun run ./index.html"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
 }
